@@ -11,7 +11,7 @@ University of Alaska, Anchorage
 <h3>Technologies:</h3>
 <ul>
 <li> Bootstrap 4.x.x </li>
-<li> Python 3.7.3</li>
+<li> Python 3.7.3 </li>
 <li> Django 2.2.6 </li>
 </ul>
 
