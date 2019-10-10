@@ -35,6 +35,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#about">About</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#differentBees">Different Bees</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Dropdown
@@ -74,16 +77,26 @@
     <div id="headerJumbotron" class="jumbotron">
         <div id="jumbotronContentContainer" class="container col-lg-5">
             <div id="jumbotronContent" class="text-center">
-                <h1 class="display-4">Cold Weather Bee Keeping</h1>
+                <h1 class="display-4">BeeKeeping In Alaska</h1>
                 <p class="lead">Find out how you can help the bees.</p>
                 <hr class="my-4">
-                <p><strong>Want to know more? Click the link below</strong></p>
+                <p><strong>Want to know more? Join our mailing list!</strong></p>
                 <form>
 
                     <div class="form-row justify-content-center">
 
                         <div class="col-auto">
-                            <button href="#" class="btn btn-primary mb-2">Learn More</button>
+                            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">@</div>
+                                </div>
+                                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary mb-2">Sign up</button>
                         </div>
                     </div>
 
@@ -96,26 +109,9 @@
 
         <h1>About</h1>
 
-        <div class="row">
+        <img class="img-thumbnail" id="profilePic" src="{% static 'pages/images/profilePic.jpg' %}">
 
-            <div class="col-sm-3">
-                <img id="websiteOwnerPic" src="{% static 'pages/images/beeface.jpg' %}">
-            </div>
-
-            <div class="col-sm-9">
-                <h2>Me</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-
-        </div>
-
-        <h1>Mission</h1>
+        <h2>Me</h2>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -124,37 +120,85 @@
             cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
 
+        <h1>About</h1>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            This Website and accompanying Facebook page is for Alaska beekeepers (Alaska Beeks) and others seeking
+            information about keeping honey bees, and maintaining honey bee health, in the 49th state. The honey-producing
+            season in Alaska is brief, compared to seasons in other states, and after a mild spring and a wet and sunny
+            summer, the calendar is rounded out by sometimes bone-chilling temperatures during our long winter months.
+            This page is primarily intended as an encouragement for those involved and considering the art, informed by
+            science, of beekeeping. This can become a welcoming question-and-answer forum for all of us. Most of all we
+            want to encourage and help Alaska beeks be successful. Please join us in dialogs, questions and answers,
+            about beekeeping in Alaska. We'd like to see this Website and Facebook page grow by means of a grassroots
+            growth efforts!
         </p>
 
+    </div>
+
+        <hr>
+
+    <div id="differentBees" class="container">
+
+        <h1>Different Bees</h1>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Honey Bees are flown up to Alaska each Spring by commercial businesses. Initial orders are placed in late
+            January and the first honey bees arrive in early April. So beeks must be ready for them, sometimes, when
+            there is still snow on the ground!
+        </p>
+        <p>
+            The three most common types of honey bees that are available here are:  Carniolan, Italian, and Buckfast
+            bees. Some Russian honey bees are in Alaska, but they are fewer in number.
+        </p>
+        <p>
+        The following descriptions have been taken from Countrysidenetwork.com
         </p>
 
+        <h2>Carniolan Bees</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Carniolan bees are a subspecies of the western honeybee and originated in what is now Slovenia. They can also
+            be found in Hungary, Romania, Croatia, Bosnia, Herzegovina, and Serbia.
         </p>
 
+        <h4>Pros</h4>
+        <ul>
+            <li>Defend their hive well from pests</li>
+            <li>Not aggressive toward beekeepers</li>
+            <li>Able to quickly adjust hive size based on environmental issues</li>
+            <li>Able to conserve honey stores</li>
+            <li>Can overwinter with fewer bees</li>
+            <li>Less susceptible to brood disease</li>
+            <li>Forages in cooler, overcast weather</li>
+        </ul>
+        <h4>Cons</h4>
+        <ul>
+            <li>Prone to swarm</li>
+            <li>More likely to need supplemental feeding — especially in the early spring</li>
+            <li>Has a hard time in hot summers</li>
+
+        </ul>
+
+        <h2>Italian Bees</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            The Italian bee is the most popular bee for beekeepers in North American. They were brought to the
+            United States in the mid-1800s and are considered the best bee for beginning beekeepers.
         </p>
+
+        <h4>Pros</h4>
+        <ul>
+            <li>Adaptable to various climates</li>
+            <li>Good honey producers</li>
+            <li>Gentle and non-aggressive</li>
+            <li>Great foragers</li>
+            <li>Large colonies</li>
+            <li>Darker queen – making her easier to identify</li>
+        </ul>
+        <h4>Cons</h4>
+        <ul>
+            <li>Prone to rob and drift</li>
+            <li>Raises brood late in fall which means more mouths to feed in winter</li>
+            <li>They do not cluster tightly in the winter so they consume more honey to stay warm</li>
+
+        </ul>
 
     </div>
     <!--MAIN END-->
@@ -197,7 +241,6 @@
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
     <script type="text/javascript">
-
 
     </script>
 
