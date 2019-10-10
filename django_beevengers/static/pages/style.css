@@ -1,0 +1,74 @@
+body {
+    position: relative;
+}
+
+p {
+
+    margin:0;
+    padding-top:10px;
+
+}
+
+.themeBgColor {
+    background-color: #fdec00;
+}
+
+#logoImage {
+
+    height:40px;
+
+}
+
+#headerSearch {
+
+    margin-right:10px;
+
+}
+
+#headerJumbotron {
+    margin-top: 50px;
+    background-image: url("images/jumbotronBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+#jumbotronContentContainer {
+    background: rgb(0,0,0, 0.3);
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+
+#headerJumbotron hr {
+
+    border-top: 1px solid white;
+
+}
+
+#about {
+
+    padding-bottom:30px;
+
+}
+
+#websiteOwnerPic {
+
+    width:100%
+
+}
+
+#footer {
+
+    height:300px;
+    background-color:#bbbbbb;
+
+}
+
+.social-icon {
+
+    width:48px;
+    margin-left:10px;
+
+}
