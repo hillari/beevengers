@@ -1,0 +1,78 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% load staticfiles %}
+
+{% block content %}
+<!-- import the style sheet for this particular page -->
+<link rel="stylesheet" type="text/css" href="{% static 'pages/calendar/style_calendar' %}">
+
+
+
+<!--MAIN START-->
+<div id="headerJumbotron" class="jumbotron">
+    <div id="jumbotronContentContainer" class="container col-lg-5">
+        <div id="jumbotronContent" class="text-center">
+            <h1 class="display-4">BeeKeeping In Alaska</h1>
+            <p class="lead">Find out how you can help the bees.</p>
+            <hr class="my-4">
+            <p><strong>Want to know more? Join our mailing list!</strong></p>
+            <form>
+
+                <div class="form-row justify-content-center">
+
+                    <div class="col-auto">
+                        <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">@</div>
+                            </div>
+                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+                        </div>
+                    </div>
+
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mb-2">Sign up</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="calendar" class="container">
+
+    <h1>Important Dates and Events</h1>
+    
+  <h2>Important Dates</h2>
+    <p>
+        Important Dates goes here...
+		
+	</p>
+    <ul>
+        <li>March 3: Do stuff</li>
+	    <li>August 5 - October 12 Important stuff</li>
+        <li>December 25 - Christmas</li>
+    </ul>
+    <h2>Calendar</h2>
+    <p>
+       <iframe src="https://calendar.google.com/calendar/embed?src=beevengersdates%40gmail.com&ctz=America%2FAnchorage" id="iframe" style="border: 0" width="1100" height="600" frameborder="0" scrolling="no"></iframe>
+  </p>
+
+</div>
+
+    <hr>
+
+
+
+<!--MAIN END-->
+
+
+<!-- include the JS into this page -->
+<script src="{% static 'pages/homepage/script.js' %}"></script>
+
+{% endblock %}
+<script type="text/javascript">
+
+});
+</script>

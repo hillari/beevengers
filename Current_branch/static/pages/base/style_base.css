@@ -1,0 +1,45 @@
+body {
+    position: relative;
+}
+
+p {
+
+    margin:0;
+    padding-top:10px;
+
+}
+
+.themeBgColor {
+    background-color: #fdec00;
+}
+
+/* Start: header */
+#logoImage {
+
+    height:40px;
+
+}
+
+#headerSearch {
+
+    margin-right:10px;
+
+}
+
+/* End: header */
+
+/* Start: footer */
+.footerColPadding {
+
+    padding:20px 0px;
+
+}
+
+.social-icon {
+
+    width:48px;
+    margin-left:10px;
+
+}
+
+/* End: footer */

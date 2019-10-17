@@ -1,0 +1,138 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/be98e44361.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/umd/util.js"></script>
+
+        <!-- import the style sheet for this particular page -->
+        <link rel="stylesheet" type="text/css" href="{% static 'pages/base/style_base.css' %}">
+
+        <title>Cold Weather Bee Keeping</title>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+
+    </head>
+    <body data-spy="scroll" data-target="#navbar-main" data-offset="50">
+
+        <!-- Start: Header-->
+        <nav id="navbar-main" class="fixed-top navbar navbar-expand-lg navbar-light themeBgColor">
+            <a class="navbar-brand" href="#"><img id="logoImage" src="{% static 'pages/base/images/logoBee.png' %}"> Beekeeping In Alaska</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#headerJumbotron">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#differentBees">Different Bees</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Education</a>
+                            <a class="dropdown-item" href="#">Articles</a>
+                            <a class="dropdown-item" href="#">Store</a>
+                            <a class="dropdown-item" href="#">Community</a>
+                            <a class="dropdown-item" href="#">Recommended Sites</a>
+                            <a class="dropdown-item" href="#">Legal Requirements</a>
+                            <a class="dropdown-item" href="{%url 'calendar'%}">Calendar</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <form id="headerSearch" class="form-inline my-2 my-lg-0">
+                    <input id="search" class="form-control mr-sm-2" type="search" placeholder="Search">
+                    <button class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
+                </form>
+
+                <!-- Start: weather widget -->
+                <div id="weatherWidget">
+                    <a target="_blank" href="https://www.booked.net/weather/anchorage-1062">
+                        <img src="https://w.bookcdn.com/weather/picture/21_1062_0_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=27792" alt="booked.net" />
+                    </a>
+                </div>
+                <!-- End: weather widget -->
+
+                <script type="text/javascript">var css_file = document.createElement("link"); css_file.setAttribute("rel", "stylesheet"); css_file.setAttribute("type", "text/css"); css_file.setAttribute("href", 'https://s.bookcdn.com/css/w/bw-160-36.css?v=0.0.1'); document.getElementsByTagName("head")[0].appendChild(css_file); function setWidgetData(data) { if (typeof (data) != 'undefined' && data.results.length > 0) { for (var i = 0; i < data.results.length; ++i) { var objMainBlock = document.getElementById('m-booked-small-t3-92199'); if (objMainBlock !== null) { var copyBlock = document.getElementById('m-bookew-weather-copy-' + data.results[i].widget_type); objMainBlock.innerHTML = data.results[i].html_code; if (copyBlock !== null) objMainBlock.appendChild(copyBlock); } } } else { alert('data=undefined||data.results is empty'); } }</script>
+                <script type="text/javascript" charset="UTF-8" src="https://widgets.booked.net/weather/info?action=get_weather_info&ver=6&cityID=1062&type=13&scode=124&ltid=3457&domid=w209&anc_id=48935&cmetric=0&wlangID=1&color=338fff&wwidth=158&header_color=fff5d9&text_color=ffffff&link_color=ffffff&border_form=0&footer_color=fff5d9&footer_text_color=333333&transparent=0"></script><!-- weather widget end -->
+            </div>
+        </nav>
+        <!-- End: Header -->
+
+
+
+        {% block content %}
+
+        {% endblock content %}
+
+
+
+        <!--FOOTER START-->
+        <div class="themeBgColor container-fluid">
+
+            <div class="container">
+
+                <div class="row">
+                    <!-- Start: Social Media -->
+                    <div class="footerColPadding col-sm-6">
+
+                        <h4>Follow Here!</h4>
+                        <hr>
+                        <!-- images gotten from:  https://www.iconfinder.com/iconsets/social-media-circle-7 -->
+                        <a href="https://www.facebook.com/" target="_blank"><img class="social-icon" src="{% static 'pages/base/images/facebookIcon.png' %}"></a>
+                        <a href="https://www.pinterest.com/AKBeekeeping/" target="_blank"><img class="social-icon" src="{% static 'pages/base/images/pinterestIcon.png' %}"></a>
+                        <a href="https://www.youtube.com/" target="_blank"><img class="social-icon" src="{% static 'pages/base/images/youtubeIcon.png' %}"></a>
+                        <a href="https://twitter.com/akbeekeeping" target="_blank"><img class="social-icon" src="{% static 'pages/base/images/twitterIcon.png' %}"></a>
+                        <a href="https://www.instagram.com/akbeekeeping/" target="_blank"><img class="social-icon" src="{% static 'pages/base/images/instagramIcon.png' %}"></a>
+                        <a href="https://www.tumblr.com/blog/akbeekeeping" target="_blank"><img class="social-icon" src="{% static 'pages/base/images/tumblrIcon.png' %}"></a>
+
+                    </div>
+                    <!-- End: Social Media -->
+
+                    <!-- Start: Contact Information -->
+                    <div class="footerColPadding col-sm-6">
+                        <h4>Contact</h4>
+                        <hr>
+                        <p><strong>Phone: </strong><a href="tel:907-555-1234">(907)-555-1234</a></p>
+                        <p><strong>Email: </strong><a href = "mailto: helloWorld@fakename.com">helloWorld@fakename.com</a></p>
+                        <p><a href="#">Discussion Board</a></p>
+                    </div>
+                    <!-- End: Contact Information -->
+
+                </div>
+            </div>
+        </div>
+        <!--FOOTER END-->
+
+    </body>
+</html>
