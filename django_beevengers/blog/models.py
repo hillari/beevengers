@@ -10,6 +10,7 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     modified_on = models.DateTimeField(auto_now=True)
     body = models.TextField()
+    #slug = models.SlugField(max_length=100, unique=True, null=True)
 
 # TODO add this back in after we create the view
     # def get_absolute_url(self):
