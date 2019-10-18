@@ -1,0 +1,23 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% load staticfiles %}
+
+{% block content %}
+<!-- import the style sheet for this particular page -->
+<link rel="stylesheet" type="text/css" href="{% static 'pages/recommended_sites/style_recommended_sites.css' %}">
+
+
+<div class="container">
+    <h1>
+    This is the Recommended Sites page.<br>
+    If this header is red, the css is connected.<br>
+    If this page got a 'hello' alert, the javascript is connected.
+    </h1>
+    <h2>Recommended Sites page.</h2>
+</div>
+
+
+<!-- include the JS into this page -->
+<script src="{% static 'pages/recommended_sites/script_recommended_sites.js' %}"></script>
+
+{% endblock %}

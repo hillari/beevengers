@@ -1,0 +1,23 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% load staticfiles %}
+
+{% block content %}
+<!-- import the style sheet for this particular page -->
+<link rel="stylesheet" type="text/css" href="{% static 'pages/education/style_education.css' %}">
+
+
+<div class="container">
+    <h1>
+    This is the Education page.<br>
+    If this header is red, the css is connected.<br>
+    If this page got a 'hello' alert, the javascript is connected.
+    </h1>
+    <h2>Education page.</h2>
+</div>
+
+
+<!-- include the JS into this page -->
+<script src="{% static 'pages/education/script_education.js' %}"></script>
+
+{% endblock %}
