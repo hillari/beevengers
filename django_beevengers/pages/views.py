@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
+
+def redirect_view(request):
+    return redirect('home/')
 
 def homepage(request):
     return render(request, 'pages/homepage/index.html')
