@@ -1,5 +1,11 @@
-h1 {
+.beeImage {
 
-    color:red;
+    width:300px;
+
+}
+
+#differentBees {
+
+    padding-bottom:10px;
 
 }
