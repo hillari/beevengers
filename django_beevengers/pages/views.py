@@ -22,3 +22,6 @@ def education(request):
 
 def recommended_sites(request):
     return render(request, 'pages/recommended_sites/recommended_sites.html')
+
+def legal(request):
+    return render(request, 'pages/legal/legal.html')
