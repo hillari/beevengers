@@ -1,0 +1,40 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% load staticfiles %}
+
+{% block content %}
+<!-- import the style sheet for this particular page -->
+<link rel="stylesheet" type="text/css" href="{% static 'pages/legal/style_legal.css' %}">
+
+
+<!--MAIN START-->
+<div id="legal" class="container">
+
+    <h1>Legal Requirments</h1>
+    <img src="{% static 'pages/Legal/Images/LegalBee.jpg' %}" width="208" height="215" align="middle" alt=""/>
+<h2>State of Alaska Offical Regulations</h2>
+    <ul>The importation of bees on beecombs and used beekeeping equiment into Alaska is prohibited.</ul>
+
+	<ul>Bees can be imported in from out of state, but they must have a health certificate signed by an apiary inspector determined to be qualified by the division. <a href="https://www.lawserver.com/law/state/alaska/ak-statutes/alaska_statutes_chapter_03-47">Offical legal section</a> </ul>
+	<ul>Local bees can brought from <a href="http://alaskahoneybee.com/dev/alaska-honey-bee-package-bees/"><div class = "box"><iframe src="http://alaskahoneybee.com/dev/alaska-honey-bee-package-bees/" width = "500px" height = "500px"></iframe></div>Alaska Honey Bee</a> and equiment from <a href="http://alaskabeeclub.com/?page_id=106">Alaska Bee Club</a></ul>
+	<h2>Beekeeping License</h2>
+	<ul>All Alaska beekeeps must register their bees with the state. <a href="http://dnr.alaska.gov/ag/Inspection/BeeRegistrationCard.pdf"> Form Link</a> </ul>
+
+
+
+</div>
+<hr>
+
+
+
+<!--MAIN END-->
+
+
+<!-- include the JS into this page -->
+<script src="{% static 'pages/homepage/script.js' %}"></script>
+
+{% endblock %}
+<script type="text/javascript">
+
+});
+</script>
