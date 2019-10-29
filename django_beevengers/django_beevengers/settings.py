@@ -26,13 +26,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users.apps.UsersConfig',
+    'users.apps.UsersConfig',  # registering our custom User model
     'blog',
     'store',
     'pages',
 ]
 
-AUTH_USER_MODEL = 'users.UsersConfig' # telling django to use our custom user model instead of the default
+AUTH_USER_MODEL = 'users.CustomUser'  # telling django to use our custom user model instead of the default
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
