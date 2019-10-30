@@ -1,0 +1,50 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+{% load staticfiles %}
+
+{% block content %}
+
+<!-- import the style sheet for this particular page -->
+<link rel="stylesheet" type="text/css" href="{% static 'pages/community/style_community.css' %}">
+
+<!-- used for facebook embed -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>
+
+<div id="mainContent" class="container">
+    <h1>Community</h1>
+
+    <!-- ****** Can't display feed from facebook anymore even with 3rd party software ****** -->
+
+    <div class="row">
+        <!-- START: Facebook page embed    GOTTEN FROM: https://developers.facebook.com/docs/plugins/page-plugin/ -->
+        <div class="col-lg-6">
+            <h3>Timeline</h3>
+            <div class="fb-page" data-href="https://www.facebook.com/SaveBees/"
+                 data-tabs="timeline" data-width="500" data-height="600"
+                 data-small-header="false" data-adapt-container-width="true"
+                 data-hide-cover="false" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/SaveBees/" class="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/SaveBees/">Bees</a>
+                </blockquote></div>
+        </div>
+
+        <div class="col-lg-6">
+            <h3>Events</h3>
+            <div class="fb-page" data-href="https://www.facebook.com/SaveBees/" data-tabs="events"
+                 data-width="500" data-height="600" data-small-header="true" data-adapt-container-width="true"
+                 data-hide-cover="true" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/SaveBees/" class="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/SaveBees/">Bees</a>
+                </blockquote>
+            </div>
+        </div>
+         <!-- END: Facebook page embed -->
+    </div>
+
+</div>
+
+<!-- include the JS into this page -->
+<script src="{% static 'pages/community/script_community.js' %}"></script>
+
+{% endblock %}
