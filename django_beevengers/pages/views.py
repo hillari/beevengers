@@ -12,6 +12,10 @@ def store(request):
 
 def calendar(request):
     return render(request, 'pages/calendar/calendar.html')
+def articles(request):
+    return render(request, 'pages/articles/articles.html')
+def education(request):
+    return render(request, 'pages/education/education.html')
 
 
 def different_bees(request):
