@@ -10,4 +10,7 @@ urlpatterns = [
     path('recommended_sites/', views.recommended_sites, name='recommended_sites'),
     path('legal/', views.legal, name='legal'),
     path('community/', views.community, name='community'),
+    path('store/', views.store, name='store'),
+    path('articles/', views.articles, name='articles'),
+    path('education/', views.education, name='education'),
 ]
