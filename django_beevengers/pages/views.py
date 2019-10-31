@@ -7,6 +7,8 @@ def redirect_view(request):
 def homepage(request):
     return render(request, 'pages/homepage/index.html')
 
+def store(request):
+    return render(request, 'pages/store/store.html')
 
 def calendar(request):
     return render(request, 'pages/calendar/calendar.html')
