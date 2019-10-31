@@ -4,15 +4,17 @@
 
 {% block content %}
 <!-- import the style sheet for this particular page -->
-<link rel="stylesheet" type="text/css" href="{% static 'pages/calendar/style_calendar' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'pages/calendar/style_calnedar.css' %}">
 
 
 
 <!--MAIN START-->
-
+<body>
 <div id="calendar" class="container">
-
+<div id="jumbotronContentContainer" class="container col-lg-5">
+        <div id="jumbotronContent" class="text-center">
     <h1>Important Dates and Events</h1>
+<<<<<<< Updated upstream
     
   <h2>Important Dates</h2>
     <p>
@@ -26,10 +28,31 @@
     </ul>
     <h2>Calendar</h2>
     <iframe src="https://calendar.google.com/calendar/embed?src=beevengersdates%40gmail.com&ctz=America%2FAnchorage" id="iframe" style="border: 0" width="1100" height="600" frameborder="0" scrolling="no"></iframe>
-
+=======
+            <h2>Important Dates</h2>
+            <p>
+                Important Dates goes here...
+            </p>
+            <ul>
+                <li>March 3: Do stuff</li>
+                <li>August 5 - October 12 Important stuff</li>
+                <li>December 25 - Christmas</li>
+            </ul>
+            <h2>
+                Calendar
+            </h2>
+        </div>
 </div>
 
-    <hr>
+    <div class="calendar-container">
+
+       <iframe src="https://calendar.google.com/calendar/embed?src=beevengersdates%40gmail.com&ctz=America%2FAnchorage" id="iframe" style="border: 0" frameborder="0" width="800" height="600" scrolling="yes"></iframe>
+    </div>
+>>>>>>> Stashed changes
+
+</div>
+</body>
+
 
 
 
