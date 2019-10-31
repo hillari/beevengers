@@ -1,0 +1,23 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% load staticfiles %}
+
+{% block content %}
+<!-- import the style sheet for this particular page -->
+<link rel="stylesheet" type="text/css" href="{% static 'pages/store/store.css' %}">
+<body>
+<hr>
+<hr>
+<hr>
+<div id="calendar" class="container">
+        <div id="jumbotronContentContainer" class="container col-lg-5">
+                <div id="jumbotronContent" class="text-center">
+                        <h1>
+                                Currently in Bee-volpment
+                        </h1>
+                        <img class="img-thumbnail" id="bee_worker" src="{% static 'pages/store/bee-worker.jpg' %}">
+
+                </div>
+        </div>
+</div>
+</body>
