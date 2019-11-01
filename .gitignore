@@ -54,9 +54,13 @@ MANIFEST
 #!media/**/init.txt
 
 # We do not want to include migrations, this can cause conflicts. Do makemigrations locally only 
-**/migrations/**
+**/migrations/*
 !**/migrations
 !**/migrations/__init__.py
+**/**/migrations/*
+
+
+
 
 ### PyCharm ###
 .idea*
