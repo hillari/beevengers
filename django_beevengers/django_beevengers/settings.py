@@ -26,7 +26,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users.apps.UsersConfig',  # registering our custom User model
+    #FIXME do I need to add 'users' or 'users.apps.UsersConfig'?
+    #'users.apps.UsersConfig',  # registering our custom User model
+    'users',
+
     'blog',
     'store',
     'pages',
