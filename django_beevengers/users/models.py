@@ -30,10 +30,9 @@ class CustomUser(AbstractUser):
     # bio = models.TextField(max_length=500, blank=True)
     email = models.EmailField(unique=True)
 
-    REQUIRED_FIELDS = ['username']
+    REQUIRED_FIELDS = []
 
     objects = CustomUserManager()
 
-
-def __str__(self):
-    return self.username  # should this return something else? email?
+    def __str__(self):
+        return self.username  # should this return something else? email?
