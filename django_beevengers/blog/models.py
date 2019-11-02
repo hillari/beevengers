@@ -18,8 +18,8 @@ class Category(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE
-                               )  # AUTH_USER_MODEL b/c we want to use our custom user admin
+    # author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE
+    #                            )  # AUTH_USER_MODEL b/c we want to use our custom user admin
     date_posted = models.DateTimeField(auto_now=True)
     date_modified = models.DateTimeField(auto_now=True)
     body = models.TextField()

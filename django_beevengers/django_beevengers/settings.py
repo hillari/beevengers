@@ -20,6 +20,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'test_without_migrations',  # to be able to run --nomigrations when testing
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -31,6 +32,7 @@ INSTALLED_APPS = [
     'store',
     'pages',
 ]
+# TEST_WITHOUT_MIGRATIONS_COMMAND = 'django_nose.management.commands.test.Command'  # for django-test-without-migrations
 
 AUTH_USER_MODEL = 'users.CustomUser'  # telling django to use our custom user model instead of the default
 
@@ -77,6 +79,9 @@ DATABASES = {
         'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '',
+        'TEST': {  # Define the name of the test database for unit testing
+            'NAME': 'beevengers_db_test',
+        },
     }
 }
 
