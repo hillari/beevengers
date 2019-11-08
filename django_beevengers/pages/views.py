@@ -16,7 +16,8 @@ def articles(request):
     return render(request, 'pages/articles/articles.html')
 def education(request):
     return render(request, 'pages/education/education.html')
-
+def videos(request):
+    return render(request, 'pages/videos/videos.html')
 
 def different_bees(request):
     return render(request, 'pages/different_bees/different_bees.html')
