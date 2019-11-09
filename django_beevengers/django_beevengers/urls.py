@@ -9,4 +9,5 @@ urlpatterns = [
     path('research_and_videos/', include('research_and_videos.urls')),
     path('overwintering_in_cold_weather/', include('overwintering_in_cold_weather.urls')),
     path('gardening/', include('gardening.urls')),
+    path('cooking/', include('cooking.urls')),
 ]

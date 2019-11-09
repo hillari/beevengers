@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'research_and_videos',
     'overwintering_in_cold_weather',
     'gardening',
+    'cooking',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'  # telling django to use our custom user model instead of the default
