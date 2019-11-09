@@ -30,7 +30,6 @@ INSTALLED_APPS = [
     # custom apps
     'users.apps.UsersConfig',  # registering our custom User model
     'blog',
-    'store',
     'pages',
     'getting_started',
     'research_and_videos',
@@ -38,6 +37,7 @@ INSTALLED_APPS = [
     'gardening',
     'cooking',
     'legal_requirements',
+    'store',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'  # telling django to use our custom user model instead of the default

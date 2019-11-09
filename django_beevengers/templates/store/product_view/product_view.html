@@ -4,7 +4,7 @@
 
 {% block content %}
 <!-- import the style sheet for this particular page -->
-<link rel="stylesheet" type="text/css" href="{% static 'pages/store/style_store.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'store/product_view/style_product_view.css' %}">
 
 
 <!--MAIN START-->
@@ -30,7 +30,7 @@
                         TODO --- access images from the database here
                         TODO --- make dynamic href values when database complete
                         -->
-                        <a href="#"><img class="card-img-top img-thumbnail" src="{% static 'pages/different_bees/images/buckfast_bees.jpg' %}" alt="Card image cap"></a>
+                        <a href="#"><img class="card-img-top img-thumbnail" src="{% static 'getting_started/different_honey_bees/images/buckfast_bees.jpg' %}" alt="Card image cap"></a>
                         <div class="card-body">
                             <h4 class="card-title">Product Title</h4>
                             <p class="card-text">
@@ -53,6 +53,6 @@
 
 
 <!-- include the JS into this page -->
-<script src="{% static 'pages/store/script_store.js' %}"></script>
+<script src="{% static 'store/product_view/script_product_view.js' %}"></script>
 
 {% endblock content%}
