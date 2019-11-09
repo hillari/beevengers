@@ -87,11 +87,11 @@
                             Overwintering in Cold Weather
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Suitable Hives</a>
-                            <a class="dropdown-item" href="#">Colony Analysis</a>
-                            <a class="dropdown-item" href="#">Nutrition</a>
-                            <a class="dropdown-item" href="#">Honey Bee Health</a>
-                            <a class="dropdown-item" href="#">Maintenance</a>
+                            <a class="dropdown-item" href="{% url 'suitable_hives' %}">Suitable Hives</a>
+                            <a class="dropdown-item" href="{% url 'colony_analysis' %}">Colony Analysis</a>
+                            <a class="dropdown-item" href="{% url 'nutrition' %}">Nutrition</a>
+                            <a class="dropdown-item" href="{% url 'honey_bee_health' %}">Honey Bee Health</a>
+                            <a class="dropdown-item" href="{% url 'maintenance' %}">Maintenance</a>
                         </div>
                      </li>
                     <!-- END: Overwintering in Cold Weather Drop down -->
@@ -108,7 +108,7 @@
                                     Gardening
                                 </a>
                                 <ul aria-labelledby="dropdownMenu2" class="dropdown-menu border-0 shadow">
-                                    <li><a tabindex="-1" href="#" class="dropdown-item">Pollinator Friendly Vegetation</a></li>
+                                    <li><a tabindex="-1" href="{% url 'pollinator_friendly_vegetation' %}" class="dropdown-item">Pollinator Friendly Vegetation</a></li>
                                 </ul>
                             </li>
                             <!-- END: Gardening Drop down -->
