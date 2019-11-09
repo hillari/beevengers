@@ -1,5 +1,6 @@
 body {
     position: relative;
+    background-color:#eee5be;
 }
 
 p {
@@ -9,8 +10,21 @@ p {
 
 }
 
+.themeLink {
+
+    color:#0477c4;
+    font-weight:bold;
+
+}
+
+.themeLink:hover {
+
+    color:#004879;
+
+}
+
 .themeBgColor {
-    background-color: #fdec00;
+    background-color: #ffc217;
 }
 
 /* Start: header */
