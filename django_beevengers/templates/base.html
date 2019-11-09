@@ -45,32 +45,106 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
+
                     <li class="nav-item">
                         <a class="nav-link" href="{%url 'homepage'%}">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'education' %}">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'community' %}">Community</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{%url 'different_bees'%}">Different Bees</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
+
+                    <!-- START: Getting Started Drop down -->
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Getting Started
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{%url 'articles' %}">Articles</a>
-                            <a class="dropdown-item" href="{%url 'store'%}">Store</a>
-                            <a class="dropdown-item" href="{%url 'recommended_sites'%}">Recommended Sites</a>
-                            <a class="dropdown-item" href="{%url 'legal'%}#legal">Legal Requirements</a>
-                            <a class="dropdown-item" href="{%url 'calendar'%}#calendar">Calendar</a>
-                            <a class="dropdown-item" href="{%url 'videos'%}">Videos</a>
-
+                            <!-- TODO --- Add real link to the article wanted by the client -->
+                            <a class="dropdown-item" href="https://www.google.com">Read This Article</a>
+                            <a class="dropdown-item" href="#">Different Honey Bees</a>
+                            <a class="dropdown-item" href="#">Different Hives</a>
+                            <a class="dropdown-item" href="#">Recommended Equipment</a>
+                            <a class="dropdown-item" href="#">Hive Placement</a>
+                            <a class="dropdown-item" href="#">Classes</a>
                         </div>
-                    </li>
+                     </li>
+                    <!-- END: Getting Started Drop down -->
+
+                    <!-- START: Research and Videos Drop down -->
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Research and Videos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Articles</a>
+                            <a class="dropdown-item" href="#">Recommended Publications</a>
+                            <a class="dropdown-item" href="#">Recommended Sites</a>
+                            <a class="dropdown-item" href="#">Videos</a>
+                        </div>
+                     </li>
+                    <!-- END: Research and Videos Drop down -->
+
+                    <!-- START: Overwintering in Cold Weather Drop down -->
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Overwintering in Cold Weather
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Suitable Hives</a>
+                            <a class="dropdown-item" href="#">Colony Analysis</a>
+                            <a class="dropdown-item" href="#">Nutrition</a>
+                            <a class="dropdown-item" href="#">Honey Bee Health</a>
+                            <a class="dropdown-item" href="#">Maintenance</a>
+                        </div>
+                     </li>
+                    <!-- END: Overwintering in Cold Weather Drop down -->
+
+                    <!-- START: More Multi-level Drop down -->
+                    <li class="nav-item dropdown">
+                        <a id="dropdownMenu1" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            More
+                        </a>
+                        <ul aria-labelledby="dropdownMenu1" class="dropdown-menu border-0 shadow">
+                            <!-- START: Gardening Drop down -->
+                            <li class="dropdown-submenu">
+                                <a id="dropdownMenu2" class="dropdown-item dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Gardening
+                                </a>
+                                <ul aria-labelledby="dropdownMenu2" class="dropdown-menu border-0 shadow">
+                                    <li><a tabindex="-1" href="#" class="dropdown-item">Pollinator Friendly Vegetation</a></li>
+                                </ul>
+                            </li>
+                            <!-- END: Gardening Drop down -->
+
+                            <!-- START: Cooking Drop down -->
+                            <li class="dropdown-submenu">
+                                <a id="dropdownMenu3" class="dropdown-item dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Cooking
+                                </a>
+                                <ul aria-labelledby="dropdownMenu3" class="dropdown-menu border-0 shadow">
+                                    <li><a tabindex="-1" href="#" class="dropdown-item">Recipes with Honey</a></li>
+                                </ul>
+                            </li>
+                            <!-- END: Cooking Drop down -->
+
+                            <!-- START: State and Local Requirements Drop down -->
+                            <li class="dropdown-submenu ">
+                                <a id="dropdownMenu4" tabindex="-1" class="dropdown-item  dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Legal Req.
+                                </a>
+                                <ul aria-labelledby="dropdownMenu4" class="dropdown-menu border-0 shadow">
+                                    <li><a tabindex="-1" href="#" class="dropdown-item">State of Alaska</a></li>
+                                    <li><a href="#" class="dropdown-item">Municipality of Anchorage</a></li>
+                                </ul>
+                            </li>
+                            <!-- END: State and Local Requirements Drop down -->
+
+                            <li class="dropdown-divider"></li>
+
+                            <li><a class="dropdown-item" href="{%url 'calendar'%}">Calender</a></li>
+                            <li><a class="dropdown-item" href="{%url 'store'%}">Store</a></li>
+                            
+                        </ul>
+                     </li>
+                    <!-- END: More Multi-level Drop down -->
+
                 </ul>
 
                 <form id="headerSearch" class="form-inline my-2 my-lg-0">
@@ -145,6 +219,8 @@
         </div>
         <!--FOOTER END-->
 
+        <!-- include JS into page -->
+        <script src="{% static 'pages/base/script_base.js' %}"></script>
 
     </body>
 </html>
