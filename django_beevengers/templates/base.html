@@ -58,11 +58,11 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <!-- TODO --- Add real link to the article wanted by the client -->
                             <a class="dropdown-item" href="https://www.google.com">Read This Article</a>
-                            <a class="dropdown-item" href="#">Different Honey Bees</a>
-                            <a class="dropdown-item" href="#">Different Hives</a>
-                            <a class="dropdown-item" href="#">Recommended Equipment</a>
-                            <a class="dropdown-item" href="#">Hive Placement</a>
-                            <a class="dropdown-item" href="#">Classes</a>
+                            <a class="dropdown-item" href="{% url 'different_honey_bees' %}">Different Honey Bees</a>
+                            <a class="dropdown-item" href="{% url 'different_hives' %}">Different Hives</a>
+                            <a class="dropdown-item" href="{% url 'recommended_equipment' %}">Recommended Equipment</a>
+                            <a class="dropdown-item" href="{% url 'hive_placement' %}">Hive Placement</a>
+                            <a class="dropdown-item" href="{% url 'classes' %}">Classes</a>
                         </div>
                      </li>
                     <!-- END: Getting Started Drop down -->
@@ -140,7 +140,7 @@
 
                             <li><a class="dropdown-item" href="{%url 'calendar'%}">Calender</a></li>
                             <li><a class="dropdown-item" href="{%url 'store'%}">Store</a></li>
-                            
+
                         </ul>
                      </li>
                     <!-- END: More Multi-level Drop down -->

@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'blog',
     'store',
     'pages',
+    'getting_started',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'  # telling django to use our custom user model instead of the default
