@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load staticfiles %}
+
+{% block content %}
+<!-- import the style sheet for this particular page -->
+<link rel="stylesheet" type="text/css" href="{% static 'getting_started/different_hives/style_different_hives.css' %}">
+
+
+
+
+<!--MAIN START-->
+
+<div id="store" class="container">
+ <div id="jumbotronContentContainer" class="container col-lg-5">
+        <div id="jumbotronContent" class="text-center">
+            <p>
+                Currently in Bee-velopment
+            </p>
+            <img class="img-thumbnail" id="Bee-Worker" src="{% static 'bee-worker.jpg' %}">
+        </div>
+ </div>
+</div>
+<!--MAIN END-->
+<!--include the JS into this page-->
+<script src="{% static 'getting_started/different_hives/script_different_hives.js' %}"></script>
+
+
+{% endblock %}
