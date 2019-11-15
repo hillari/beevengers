@@ -4,7 +4,7 @@ from django.views import generic
 
 
 class PostList(generic.ListView):
-    queryset = Post.objects.filter(status=1).order_by('-date_posted')  # status 1 = only show published posts at top
+    queryset = Post.objects.order_by('-date_posted')  # status 1 = only show published posts at top
     template_name = 'index.html'
     # should we add  pagination?
 
