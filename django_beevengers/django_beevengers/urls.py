@@ -19,5 +19,9 @@ urlpatterns = [
     path('blog/', include('blog.urls'))
 ]
 
+#  FIXME this code is for production specifically
+# Will need to be modified once in production
+# The modification should only be removing the 'if.settings.DEBUG' line
+# see - https://techstream.org/Web-Development/Serving-Files-in-Django
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
