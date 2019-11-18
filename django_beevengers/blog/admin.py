@@ -15,5 +15,6 @@ class PostAdmin(admin.ModelAdmin):
     #     if "_go-back" in request.POST:
     #         return HttpResponseRedirect(".")
 
+
 admin.site.register(Category)
 admin.site.register(Post, PostAdmin)  # first argument needs to be the class from the model

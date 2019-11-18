@@ -24,13 +24,12 @@ class Post(models.Model):
     date_modified = models.DateTimeField(auto_now=True)
     body = models.TextField()
     category = models.ManyToManyField(Category)  # b/c blog can have many category types
-
-
+    post_image = models.ImageField(upload_to='images/blog_images', blank=True)
 
     class Meta:
         ordering = ['date_posted']  # here we tell django to sort results by date_posted field
 
-    # TODO add this back in after we create the view
+    # TODO add this back in after we create the view ?
     # def get_absolute_url(self):
     #     """Returns the url to access a particular instance of the model."""
     #     return reverse('model-detail-view', args=[str(self.id)])
