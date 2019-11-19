@@ -23,7 +23,9 @@ class Post(models.Model):
     date_posted = models.DateTimeField(auto_now=True)
     date_modified = models.DateTimeField(auto_now=True)
     body = models.TextField()
-    category = models.ManyToManyField(Category)  # b/c blogs can have many category types
+    category = models.ManyToManyField(Category)  # b/c blog can have many category types
+
+
 
     class Meta:
         ordering = ['date_posted']  # here we tell django to sort results by date_posted field
