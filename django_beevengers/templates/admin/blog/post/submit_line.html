@@ -11,7 +11,7 @@
     </p>
     {# The lines below create a button that will take the user back to the blog post list. Needs to be moved so it displays properly#}
     <p class="cancel-change-button">
-            <a href="{% url opts|admin_urlname:'changelist' %}"><input type="button" name="Cancel" value="Cancel"></a></p>
+            <a href="{% url opts|admin_urlname:'changelist' %}"><input type="button" style="background-color:red;color:white;" name="Cancel" value="Cancel"></a></p>
 {% endif %}
 {% if show_save_as_new %}<input type="submit" value="{% trans 'Save as new' %}" name="_saveasnew">{% endif %}
 {% if show_save_and_add_another %}<input type="submit" value="{% trans 'Save and add another' %}" name="_addanother">{% endif %}
