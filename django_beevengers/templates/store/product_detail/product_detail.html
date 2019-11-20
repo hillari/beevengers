@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load staticfiles %}
+
+{% block content %}
+<!-- import the style sheet for this particular page -->
+<link rel="stylesheet" type="text/css" href="{% static 'store/product_detail/style_product_detail.css' %}">
+
+
+<!--MAIN START-->
+<div class="container">
+
+    <h1>{{ product.item_name }}</h1>
+
+    <div class="row">
+
+        <div class="col-md-7">
+            <img id="mainImage" src="{{ product.product_image.url }}">
+            <p>
+                {{ product.description }}
+            </p>
+        </div>
+
+        <div class="col-md-5">
+
+        </div>
+    </div>
+
+</div>
+<!--MAIN END-->
+
+
+<!-- include the JS into this page -->
+<script src="{% static 'store/product_detail/script_product_detail.js' %}"></script>
+
+{% endblock content%}
