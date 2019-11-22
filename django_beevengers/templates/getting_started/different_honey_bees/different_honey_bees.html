@@ -5,7 +5,11 @@
 {% block content %}
 <!-- import the style sheet for this particular page -->
 <link rel="stylesheet" type="text/css" href="{% static 'getting_started/different_honey_bees/style_different_honey_bees.css' %}">
-
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{%url 'homepage'%}">Home</a></li>
+    <li class="breadcrumb-item" aria-current="page">Getting Stated</li>
+    <li class="breadcrumb-item active" aria-current="page">Different Honey Bees</li>
+  </ol>
 
 <div class="container">
     <div id="differentBees">
