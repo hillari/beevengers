@@ -11,7 +11,7 @@ urlpatterns = [
     path('', include('pages.urls')),
     path('getting_started/', include('getting_started.urls')),
     path('research_and_videos/', include('research_and_videos.urls')),
-    path('overwintering_in_cold_weather/', include('overwintering_in_cold_weather.urls')),
+    path('advanced_topics/', include('advanced_topics.urls')),
     path('gardening/', include('gardening.urls')),
     path('cooking/', include('cooking.urls')),
     path('legal_requirements/', include('legal_requirements.urls')),
