@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'pages',
     'getting_started',
     'research_and_videos',
-    'overwintering_in_cold_weather',
+    'advanced_topics',
     'gardening',
     'cooking',
     'legal_requirements',
