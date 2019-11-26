@@ -1,0 +1,65 @@
+#mainImage {
+
+    width:100%;
+
+}
+
+.img-thumbnail {
+
+    background-color: gray;
+
+}
+
+/* START: product request form */
+.productValues {
+
+    font-size:130%;
+
+}
+
+#requestContainer {
+
+    background-color:#dcdcdc;
+    width:100%;
+    height:100%;
+    border-radius:5px;
+    margin:10px 0px;;
+}
+
+#requestForm {
+
+    width:100%;
+    height:100%;
+    margin:10px 0px;
+    border-radius:5px;
+    padding:10px;
+
+}
+
+.form-group {
+
+    font-weight:bold;
+
+}
+
+#requestButton {
+
+    margin-top:10px;
+    width:100%;
+
+}
+
+hr {
+
+    border-top: 1px solid gray;
+
+}
+
+#zipcodeContainer {
+
+    margin:0px;
+    padding:0px;
+
+}
+
+/* END: product request form */

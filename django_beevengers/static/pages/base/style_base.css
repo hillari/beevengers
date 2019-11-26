@@ -27,14 +27,14 @@ p {
     background-color: #ffc217;
 }
 
-#defaultButton {
+.defaultButton {
 
     background-color: #3498db;
     color:white;
 
 }
 
-#defaultButton:hover{
+.defaultButton:hover{
 
     background-color: #1d5275;
 
@@ -78,13 +78,13 @@ p {
 /* Start: footer */
 
     /* START: footer group link */
-    #groupButtonContainer{
+    .groupButtonContainer{
 
         padding-top:10px;
 
     }
 
-    #groupButtonContainer a:hover{
+    .groupButtonContainer a:hover{
 
         text-decoration:none !important;
 

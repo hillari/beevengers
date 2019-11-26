@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load staticfiles %}
+{% load store_extras %}
+{% block content %}
+<!-- import the style sheet for this particular page -->
+<link rel="stylesheet" type="text/css" href="{% static 'store/product_list/style_product_list.css' %}">
+
+
+<!--MAIN START-->
+<div class="container">
+
+    <h1>Store</h1>
+
+    <!-- START: display products from database -->
+
+
+    <div id="productContainer">
+
+        {% if product_list %}
+            <!-- start adding products to page -->
+            {% for product in product_list %}
+
+            <!-- does only if forloop % 3 is equal to 0 (used for cols) -->
+            {% if forloop.counter|row_start_modulo:3 %}
+                <div class="cardRow row">
+                <!-- loop for a max of 2 items in a row. If last item has noting, leave a blank
+                    div so that everything will still look nice -->
+                <div class="card-deck">
+            {% endif %}
+
+                <div class="card" style="width: 100%;">
+
+                    <a href="#"><img class="card-img-top img-thumbnail" src="{{ product.product_image.url }}" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <h4 class="card-title">{{ product.item_name }}</h4>
+                        <p class="card-text">
+                            <!--cut description off at 150 char if larger than it -->
+                            {% with product_name=product.description|slice:":150" %}
+                                {% if product_name|length >= 150 %}
+                                    {{ product_name|add:"..." }}
+                                {% else %}
+                                    {{ product_name }}
+                                {% endif %}
+                            {% endwith %}
+                        </p>
+                        <p><a href="{% url 'product_detail' product.slug  %}" class="btn btn-success">View Product</a></p>
+                    </div>
+                </div>
+
+                <!-- only do if no more products exist -->
+                {% ifequal forloop.counter product_list|length %}
+
+                    <!-- if a row is not full with 3 empty spaces, fill it up with empties to make the row look nice -->
+                    {% for _ in forloop.counter|num_empties:3   %}
+
+                        <div style="opacity: 0;" class="card" style="width: 100%;"></div>
+
+                        <!-- divs are used here to close row since they will not be accessed in bottom if statement -->
+                        </div>
+                        </div>
+                    {% endfor %}
+
+                {% endifequal %}
+
+                    <!-- used to close off row and deck -->
+                {% if forloop.counter|row_end_modulo:3 %}
+                    </div>
+                    </div>
+                {% endif %}
+
+            {% endfor %}
+        {% else %}
+            <h4>Sorry, no products are available at this time. Check back soon!</h4>
+        {% endif %}
+    </div>
+
+    <!-- END: display products from database -->
+
+</div>
+<!--MAIN END-->
+
+
+<!-- include the JS into this page -->
+<script src="{% static 'store/product_list/script_product_list.js' %}"></script>
+
+{% endblock content%}
