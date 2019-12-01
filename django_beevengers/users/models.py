@@ -24,13 +24,15 @@ class CustomUserManager(BaseUserManager):
         user.is_superuser = True  # maybe do .setdefault?
         user.is_staff = True
         user.is_active = True
-
+        user.save()
+        return user
 
 class CustomUser(AbstractUser):
     # bio = models.TextField(max_length=500, blank=True)
     email = models.EmailField(unique=True)
 
-    REQUIRED_FIELDS = []
+    USERNAME_FIELD = 'username'
+    REQUIRED_FIELDS = ['email']
 
     objects = CustomUserManager()
 
