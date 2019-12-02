@@ -4,7 +4,7 @@ from django.db import models
 class Product(models.Model):
     item_name = models.CharField(max_length=200)
     description = models.TextField()
-    product_image = models.ImageField(upload_to='images/')
+    product_image = models.ImageField(upload_to='images/store_images')
     slug = models.SlugField(max_length=100, unique=True)
 
     # 6 allows price up to $9,999.99
