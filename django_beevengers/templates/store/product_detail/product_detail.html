@@ -41,82 +41,80 @@
                     <div class="alert alert-primary" role="alert">{{ form.non_field_errors }}</div>
                 {% endif %}
                 <div class="form-group">
+                    <label>{{ form.first_name.label}}</label>
                     {% if form.first_name.errors %}
                         <div class="alert alert-primary" role="alert">{{ form.first_name.errors }}</div>
                     {% endif %}
-                    <label>{{ form.first_name.label}}</label>
                     <p>{{ form.first_name }}</p>
                 </div>
                 <div class="form-group">
+                    <label>{{ form.last_name.label }}</label>
                     {% if form.last_name.errors %}
                         <div class="alert alert-primary" role="alert">{{ form.last_name.errors }}</div>
                     {% endif %}
-                    <label>{{ form.last_name.label }}</label>
                     <p>{{form.last_name}}</p>
                 </div>
                 <div class="form-group">
+                    <label>{{ form.phone_number.label }}</label>
                     {% if form.phone_number.errors %}
                         <div class="alert alert-primary" role="alert">{{ form.phone_number.errors }}</div>
                     {% endif %}
-                    <label>{{ form.phone_number.label }}</label>
                     <p>{{ form.phone_number }}</p>
-                    <small>Format: 1234567890</small>
                 </div>
 
                 <div class="form-group">
+                    <label>{{ form.email.label }}</label>
                     {% if form.email.errors %}
                         <div class="alert alert-primary" role="alert">{{ form.email.errors }}</div>
                     {% endif %}
-                    <label>{{ form.email.label }}</label>
                     <p>{{ form.email }}</p>
                 </div>
                 <div class="form-group">
+                    <label>{{ form.quantity.label }}</label>
                     {% if form.quantity.errors %}
                         <div class="alert alert-primary" role="alert">{{ form.quantity.errors }}</div>
                     {% endif %}
-                    <label>{{ form.quantity.label }}</label>
                     <p>{{ form.quantity }}</p>
                 </div>
 
                 <hr>
 
                 <div class="form-group">
+                    <label>{{ form.address.label }}</label>
                     {% if form.address.errors %}
                         <div class="alert alert-primary" role="alert">{{ form.address.errors }}</div>
                     {% endif %}
-                    <label>{{ form.address.label }}</label>
                     <p>{{ form.address }}</p>
                 </div>
                 <div class="form-group">
+                    <label>{{ form.address_2.label }}</label>
                     {% if form.address_2.errors %}
                         <div class="alert alert-primary" role="alert">{{ form.address_2.errors }}</div>
                     {% endif %}
-                    <label>{{ form.address_2.label }}</label>
-                    <p>{{ form.address_2 }}</p> <!--<placeholder="Apartment, studio, or floor">-->
+                    <p>{{ form.address_2 }}</p>
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        {% if form.city.errors %}
-                            <div class="alert alert-primary" role="alert">{{ form.city.errors }}</div>
-                        {% endif %}
-                        <label>{{ form.city.label}}</label>
-                        <p>{{ form.city }}</p>
-                    </div>
-                    <div class="form-group col-md-4">
-                        {% if form.state.errors %}
-                            <div class="alert alert-primary" role="alert">{{ form.state.errors }}</div>
-                        {% endif %}
-                        <label>{{ form.state.label }}</label>
-                        <p>{{ form.state }}</p>
-                    </div>
+
+                <div class="form-group">
+                    <label>{{ form.city.label}}</label>
+                    {% if form.city.errors %}
+                        <div class="alert alert-primary" role="alert">{{ form.city.errors }}</div>
+                    {% endif %}
+                    <p>{{ form.city }}</p>
                 </div>
-                <div id="zipcodeContainer" class="form-group col-md-3">
+                <div class="form-group">
+                    <label>{{ form.state.label }}</label>
+                    {% if form.state.errors %}
+                        <div class="alert alert-primary" role="alert">{{ form.state.errors }}</div>
+                    {% endif %}
+                    <p>{{ form.state }}</p>
+                </div>
+
+                <div id="zipcodeContainer" class="form-group">
+                    <label>{{ form.zip_code.label }}</label>
                     {% if form.zip_code.errors %}
                         <div class="alert alert-primary" role="alert">{{ form.zip_code.errors }}</div>
                     {% endif %}
-                    <label>{{ form.zip_code.label }}</label>
                     <p>{{ form.zip_code }}</p>
-                    <small>Format: 12345</small>
                 </div>
 
                 <button id="requestButton" type="submit" class="btn btn-success">Request</button>

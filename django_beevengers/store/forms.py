@@ -22,16 +22,17 @@ QUANTITY_CHOICES = [
 class ProductForm(forms.ModelForm):
     first_name = forms.CharField(required=True, max_length=200, widget=forms.TextInput(attrs={'class': 'form-control'}))
     last_name = forms.CharField(required=False, max_length=30, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    phone_number = forms.RegexField(required=True, regex=r'^\+?1?\d{9,15}$', widget=forms.TextInput(attrs={'class': 'form-control'}),error_messages={'invalid': 'Please enter a phone numer in this format: 1234567890'})
-    email = forms.EmailField(required=False, max_length=70, widget=forms.TextInput(attrs={'class': 'form-control'}),error_messages={'invalid': 'Please enter an email in this format: hello@world.com'})
+    phone_number = forms.RegexField(required=True, regex=r'^\+?1?\d{9,15}$', widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'i.e. 1234567890'}),error_messages={'invalid': 'Please enter a phone numer in this format: 1234567890'})
+    email = forms.EmailField(required=False, max_length=70, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'i.e. hello@world.com'}), error_messages={'invalid': 'Please enter an email in this format: hello@world.com'})
     quantity = forms.CharField(required=True, max_length=200, widget=forms.Select(choices=QUANTITY_CHOICES, attrs={'class': 'form-control'}))
-    address = forms.CharField(required=True, max_length=200, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    address_2 = forms.CharField(required=False, max_length=200, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    address = forms.CharField(required=True, max_length=200, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'i.e. 1234 Main St'}))
+    address_2 = forms.CharField(required=False, max_length=200, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'i.e. Apartment, studio, or floor'}))
     city = forms.CharField(required=True, max_length=200, widget=forms.TextInput(attrs={'class': 'form-control'}))
     state = forms.CharField(required=True, max_length=200, widget=forms.Select(choices=STATE_CHOICES, attrs={'class': 'form-control'}))
     zip_code = forms.RegexField(required=True, regex='^(^[0-9]{5}(?:-[0-9]{4})?$|^$)', help_text='Zip Code',
                                 error_messages={'required': 'This value is required',
-                                                'invalid': 'Please enter a zip code in this format: 12345'})
+                                                'invalid': 'Please enter a zip code in this format: 12345'},
+                                widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'i.e. 12345'}))
 
     class Meta:
         model = OrderRequest
