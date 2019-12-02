@@ -1,5 +1,4 @@
 from django.contrib import admin
-# from django.http import HttpResponseRedirect
 
 from .models import Category, Post
 

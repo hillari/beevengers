@@ -1,11 +1,6 @@
 from django.db import models
 from django.conf import settings
 
-STATUS = (
-    (0, "Draft"),
-    (1, "Publish")
-)
-
 
 class Category(models.Model):
     title = models.CharField(max_length=200)
@@ -25,12 +20,10 @@ class Post(models.Model):
     body = models.TextField()
     category = models.ManyToManyField(Category)  # b/c blog can have many category types
 
-
-
     class Meta:
         ordering = ['date_posted']  # here we tell django to sort results by date_posted field
 
-    # TODO add this back in after we create the view
+    # TODO look up if we need this code with new view changes
     # def get_absolute_url(self):
     #     """Returns the url to access a particular instance of the model."""
     #     return reverse('model-detail-view', args=[str(self.id)])
