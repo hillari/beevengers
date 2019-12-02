@@ -24,6 +24,7 @@ class Post(models.Model):
     date_modified = models.DateTimeField(auto_now=True)
     body = models.TextField()
     category = models.ManyToManyField(Category)  # b/c blog can have many category types
+    blog_image = models.ImageField(upload_to='images/blog_images', null=True, blank=True)
 
 
 
