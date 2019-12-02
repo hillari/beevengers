@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'cooking',
     'legal_requirements',
     'store',
+
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'  # telling django to use our custom user model instead of the default
