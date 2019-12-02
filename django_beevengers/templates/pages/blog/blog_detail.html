@@ -1,6 +1,15 @@
 {% extends 'base.html' %} {% block content %}
 
-<a class="btn btn-primary" href="{% url 'blog-home' %}" role="button">Back to Articles</a>
+<!-- START: Back Button -->
+    <div class="groupButtonContainer col-md-2">
+        <a href="{% url 'blog-home' %}">
+            <button class="defaultButton btn btn-block">
+                &larr; Go Back
+            </button>
+        </a>
+    </div>
+<!-- END: Back Button -->
+
 <div class="container">
   <div class="row">
     <div class="col-12 card mb-4 mt-4">
