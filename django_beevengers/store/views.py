@@ -3,6 +3,7 @@ from django.views import generic
 from .models import Product
 from .forms import ProductForm
 
+
 class ProductList(generic.ListView):
     queryset = Product.objects.all()
     template_name = 'store/product_list/product_list.html'
@@ -40,13 +41,6 @@ class ProductDetail(generic.DetailView):
             form = ProductForm()
             return render(request, 'store/product_detail/success.html')
 
-        args = {'form':form, 'product':product}#, 'text':text}
+        args = {'form':form, 'product':product}
         return render(request, self.template_name, args)
 
-
-# def model_image_upload(request):
-#     if request.method == 'POST':
-#         form = ProductForm(request.POST, request.FILES)
-
-# def product_list(request):
-#     return render(request, 'store/product_list/product_list.html')

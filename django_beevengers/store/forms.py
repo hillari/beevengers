@@ -14,10 +14,12 @@ STATE_CHOICES = [
              ('WV', 'West Virginia'), ('WI', 'Wisconsin'), ('WY', 'Wyoming')
 ]
 
+
 QUANTITY_CHOICES = [
     ('one', '1'), ('two', '2'), ('three', '3'), ('four', '4'), ('five', '5'), ('six', '6'), ('seven', '7'),
     ('eight', '8'), ('nine', '9'), ('more than 10', '10+')
 ]
+
 
 class ProductForm(forms.ModelForm):
     first_name = forms.CharField(required=True, max_length=200, widget=forms.TextInput(attrs={'class': 'form-control'}))
@@ -35,5 +37,6 @@ class ProductForm(forms.ModelForm):
                                 widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'i.e. 12345'}))
 
     class Meta:
+        # This needs to be here to make the form work as an object.
         model = OrderRequest
         fields = ['first_name']
