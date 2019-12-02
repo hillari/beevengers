@@ -1,4 +1,9 @@
 {% extends 'base.html' %} {% block content %}
+{% load static %}
+{% load staticfiles %}
+
+<!-- import the style sheet for this particular page -->
+<link rel="stylesheet" type="text/css" href="{% static 'pages/blog/style_blog_detail.css' %}">
 
 <!-- START: Back Button -->
     <div class="groupButtonContainer col-md-2">
@@ -16,6 +21,9 @@
       <div class="card-body">
         <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
         <p class="text-muted">{{ post.author }} | {{ post.created_on }}</p>
+
+        <img class="img-thumbnail" id="mainImage" src="{{ post.blog_image.url }}">
+
         <p> {{ post.body }}</p>
         <p class="card-text ">{{ object.content | safe }}</p>
       </div>
