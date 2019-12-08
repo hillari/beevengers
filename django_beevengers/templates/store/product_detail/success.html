@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load staticfiles %}
+
+{% block content %}
+<!-- import the style sheet for this particular page -->
+<link rel="stylesheet" type="text/css" href="{% static 'store/product_detail/style_product_detail.css' %}">
+
+
+<!--MAIN START-->
+
+<!-- START: Back Button -->
+    <div class="groupButtonContainer col-md-2">
+        <a href="{%url 'product_list'%}">
+            <button class="defaultButton btn btn-block">
+                &larr; Back To Store
+            </button>
+        </a>
+    </div>
+<!-- END: Back Button -->
+
+
+<div class="container">
+
+    <div style="margin:100px 0px 150px 0px;" class="alert alert-success" role="alert">
+        <h4>Your order request was submitted successfully!</h4>
+        <p>We will get back to you as soon as we can.</p>
+    </div>
+
+</div>
+<!--MAIN END-->
+
+
+<!-- include the JS into this page -->
+<script src="{% static 'store/product_detail/script_product_detail.js' %}"></script>
+
+{% endblock content%}
