@@ -1,6 +1,7 @@
 
 // THIS IS FOR THE MULTI DROPDOWN MENUS
 $(function() {
+
   // ------------------------------------------------------- //
   // Multi Level dropdowns
   // ------------------------------------------------------ //
@@ -19,4 +20,14 @@ $(function() {
     });
 
   });
+
+  $(document).ready( function() {
+    pageContent = $("#pageContent").height();
+    documentHeight = $(document).height();
+    newFooterHeight = documentHeight-pageContent;
+    $("#footer").height(newFooterHeight);
+  });
+
 });
+
+

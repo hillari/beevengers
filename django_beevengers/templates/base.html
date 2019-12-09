@@ -34,146 +34,146 @@
 
     </head>
     <body data-spy="scroll" data-target="#navbar-main" data-offset="50">
+        <div id="pageContent">
+            <!-- Start: Header-->
+            <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light themeBgColor">
+                <a class="navbar-brand" href="#"><img id="logoImage" src="{% static 'pages/base/images/logoBee.png' %}"> Alaska Beekeeping</a>
 
-        <!-- Start: Header-->
-        <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light themeBgColor">
-            <a class="navbar-brand" href="#"><img id="logoImage" src="{% static 'pages/base/images/logoBee.png' %}"> Alaska Beekeeping</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{%url 'homepage'%}">Home <span class="sr-only">(current)</span></a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{%url 'homepage'%}">Home <span class="sr-only">(current)</span></a>
-                    </li>
+                        <!-- START: Getting Started Drop down -->
+                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Getting Started
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <!-- TODO --- Add real link to the article wanted by the client -->
+                                <a class="dropdown-item" href="https://www.frontiersman.com/around_the_valley/it-s-that-time-of-the-year-to-start-thinking/article_2a458460-2e66-11e8-a424-d3995d64259d.html" target="_blank">Read This Article</a>
+                                <a class="dropdown-item" href="{% url 'different_honey_bees' %}">Different Honey Bees</a>
+                                <a class="dropdown-item" href="https://www.perfectbee.com/your-beehive/beehives-and-accessories/common-types-of-beehive" target="_blank">Different Hives</a>
+                                <a class="dropdown-item" href="https://beebuilt.com/pages/beekeeping-equipment" target="_blank">Recommended Equipment</a>
+                                <a class="dropdown-item" href="{% url 'hive_placement' %}">Hive Placement</a>
+                                <a class="dropdown-item" href="{% url 'classes' %}">Classes</a>
+                            </div>
+                         </li>
+                        <!-- END: Getting Started Drop down -->
 
-                    <!-- START: Getting Started Drop down -->
-                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Getting Started
+
+                        <!-- START: Advanced Topics Drop down -->
+                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Advanced Topics
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{% url 'suitable_hives' %}">Suitable Hives</a>
+                                <a class="dropdown-item" href="{% url 'colony_analysis' %}">Colony Analysis</a>
+                                <a class="dropdown-item" href="{% url 'nutrition' %}">Nutrition</a>
+                                <a class="dropdown-item" href="{% url 'honey_bee_health' %}">Honey Bee Health</a>
+                                <a class="dropdown-item" href="{% url 'maintenance' %}">Maintenance</a>
+                            </div>
+                         </li>
+                        <!-- END: Advanced Topics in Cold Weather Drop down -->
+                        <!-- START: Research and Videos Drop down -->
+                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Research and Videos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{% url 'blog-home' %}">Articles</a>
+                                <a class="dropdown-item" href="{% url 'recommended_publications' %}">Recommended Publications</a>
+                                <a class="dropdown-item" href="{% url 'recommended_sites' %}">Recommended Sites</a>
+                                <a class="dropdown-item" href="{% url 'videos' %}">Videos</a>
+                            </div>
+                         </li>
+                        <!-- END: Research and Videos Drop down -->
+
+                        <!-- START: More Multi-level Drop down -->
+                        <li class="nav-item dropdown">
+                            <a id="dropdownMenu1" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                More
+                            </a>
+                            <ul aria-labelledby="dropdownMenu1" class="dropdown-menu border-0 shadow">
+                                <!-- START: Gardening Drop down -->
+                                <li class="dropdown-submenu">
+                                    <a id="dropdownMenu2" class="dropdown-item dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Gardening
+                                    </a>
+                                    <ul aria-labelledby="dropdownMenu2" class="dropdown-menu border-0 shadow">
+                                        <li><a tabindex="-1" href="{% url 'pollinator_friendly_vegetation' %}" class="dropdown-item">Pollinator Friendly Vegetation</a></li>
+                                    </ul>
+                                </li>
+                                <!-- END: Gardening Drop down -->
+
+                                <!-- START: Cooking Drop down -->
+                                <li class="dropdown-submenu">
+                                    <a id="dropdownMenu3" class="dropdown-item dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Cooking
+                                    </a>
+                                    <ul aria-labelledby="dropdownMenu3" class="dropdown-menu border-0 shadow">
+                                        <li><a tabindex="-1" href="{% url 'recipes_with_honey' %}" class="dropdown-item">Recipes with Honey</a></li>
+                                    </ul>
+                                </li>
+                                <!-- END: Cooking Drop down -->
+
+                                <!-- START: State and Local Requirements Drop down -->
+                                <li class="dropdown-submenu ">
+                                    <a id="dropdownMenu4" tabindex="-1" class="dropdown-item  dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Legal Req.
+                                    </a>
+                                    <ul aria-labelledby="dropdownMenu4" class="dropdown-menu border-0 shadow">
+                                        <li><a tabindex="-1" href="{% url 'state_of_alaska' %}" class="dropdown-item">State of Alaska</a></li>
+                                        <li><a href="{% url 'municipality_of_anchorage' %}" class="dropdown-item">Municipality of Anchorage</a></li>
+                                    </ul>
+                                </li>
+                                <!-- END: State and Local Requirements Drop down -->
+
+                                <li class="dropdown-divider"></li>
+
+                                <li><a class="dropdown-item" href="{%url 'calendar'%}">Calender</a></li>
+                                <li><a class="dropdown-item" href="{%url 'product_list'%}">Store</a></li>
+
+                            </ul>
+                         </li>
+                        <!-- END: More Multi-level Drop down -->
+
+                    </ul>
+
+                    <form id="headerSearch" class="form-inline my-2 my-lg-0">
+                        <input id="search" class="form-control mr-sm-2" type="search" placeholder="Search">
+                        <button class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+
+                    <!-- Start: weather widget -->
+                    <div id="weatherWidget">
+                        <a target="_blank" href="https://www.booked.net/weather/anchorage-1062">
+                            <img src="https://w.bookcdn.com/weather/picture/21_1062_0_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=27792" alt="booked.net" />
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <!-- TODO --- Add real link to the article wanted by the client -->
-                            <a class="dropdown-item" href="https://www.frontiersman.com/around_the_valley/it-s-that-time-of-the-year-to-start-thinking/article_2a458460-2e66-11e8-a424-d3995d64259d.html" target="_blank">Read This Article</a>
-                            <a class="dropdown-item" href="{% url 'different_honey_bees' %}">Different Honey Bees</a>
-                            <a class="dropdown-item" href="https://www.perfectbee.com/your-beehive/beehives-and-accessories/common-types-of-beehive" target="_blank">Different Hives</a>
-                            <a class="dropdown-item" href="https://beebuilt.com/pages/beekeeping-equipment" target="_blank">Recommended Equipment</a>
-                            <a class="dropdown-item" href="{% url 'hive_placement' %}">Hive Placement</a>
-                            <a class="dropdown-item" href="{% url 'classes' %}">Classes</a>
-                        </div>
-                     </li>
-                    <!-- END: Getting Started Drop down -->
+                    </div>
+                    <!-- End: weather widget -->
 
-
-                    <!-- START: Advanced Topics Drop down -->
-                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Advanced Topics
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{% url 'suitable_hives' %}">Suitable Hives</a>
-                            <a class="dropdown-item" href="{% url 'colony_analysis' %}">Colony Analysis</a>
-                            <a class="dropdown-item" href="{% url 'nutrition' %}">Nutrition</a>
-                            <a class="dropdown-item" href="{% url 'honey_bee_health' %}">Honey Bee Health</a>
-                            <a class="dropdown-item" href="{% url 'maintenance' %}">Maintenance</a>
-                        </div>
-                     </li>
-                    <!-- END: Advanced Topics in Cold Weather Drop down -->
-                    <!-- START: Research and Videos Drop down -->
-                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Research and Videos
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{% url 'blog-home' %}">Articles</a>
-                            <a class="dropdown-item" href="{% url 'recommended_publications' %}">Recommended Publications</a>
-                            <a class="dropdown-item" href="{% url 'recommended_sites' %}">Recommended Sites</a>
-                            <a class="dropdown-item" href="{% url 'videos' %}">Videos</a>
-                        </div>
-                     </li>
-                    <!-- END: Research and Videos Drop down -->
-
-                    <!-- START: More Multi-level Drop down -->
-                    <li class="nav-item dropdown">
-                        <a id="dropdownMenu1" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            More
-                        </a>
-                        <ul aria-labelledby="dropdownMenu1" class="dropdown-menu border-0 shadow">
-                            <!-- START: Gardening Drop down -->
-                            <li class="dropdown-submenu">
-                                <a id="dropdownMenu2" class="dropdown-item dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Gardening
-                                </a>
-                                <ul aria-labelledby="dropdownMenu2" class="dropdown-menu border-0 shadow">
-                                    <li><a tabindex="-1" href="{% url 'pollinator_friendly_vegetation' %}" class="dropdown-item">Pollinator Friendly Vegetation</a></li>
-                                </ul>
-                            </li>
-                            <!-- END: Gardening Drop down -->
-
-                            <!-- START: Cooking Drop down -->
-                            <li class="dropdown-submenu">
-                                <a id="dropdownMenu3" class="dropdown-item dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Cooking
-                                </a>
-                                <ul aria-labelledby="dropdownMenu3" class="dropdown-menu border-0 shadow">
-                                    <li><a tabindex="-1" href="{% url 'recipes_with_honey' %}" class="dropdown-item">Recipes with Honey</a></li>
-                                </ul>
-                            </li>
-                            <!-- END: Cooking Drop down -->
-
-                            <!-- START: State and Local Requirements Drop down -->
-                            <li class="dropdown-submenu ">
-                                <a id="dropdownMenu4" tabindex="-1" class="dropdown-item  dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Legal Req.
-                                </a>
-                                <ul aria-labelledby="dropdownMenu4" class="dropdown-menu border-0 shadow">
-                                    <li><a tabindex="-1" href="{% url 'state_of_alaska' %}" class="dropdown-item">State of Alaska</a></li>
-                                    <li><a href="{% url 'municipality_of_anchorage' %}" class="dropdown-item">Municipality of Anchorage</a></li>
-                                </ul>
-                            </li>
-                            <!-- END: State and Local Requirements Drop down -->
-
-                            <li class="dropdown-divider"></li>
-
-                            <li><a class="dropdown-item" href="{%url 'calendar'%}">Calender</a></li>
-                            <li><a class="dropdown-item" href="{%url 'product_list'%}">Store</a></li>
-
-                        </ul>
-                     </li>
-                    <!-- END: More Multi-level Drop down -->
-
-                </ul>
-
-                <form id="headerSearch" class="form-inline my-2 my-lg-0">
-                    <input id="search" class="form-control mr-sm-2" type="search" placeholder="Search">
-                    <button class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
-                </form>
-
-                <!-- Start: weather widget -->
-                <div id="weatherWidget">
-                    <a target="_blank" href="https://www.booked.net/weather/anchorage-1062">
-                        <img src="https://w.bookcdn.com/weather/picture/21_1062_0_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=27792" alt="booked.net" />
-                    </a>
+                    <script type="text/javascript">var css_file = document.createElement("link"); css_file.setAttribute("rel", "stylesheet"); css_file.setAttribute("type", "text/css"); css_file.setAttribute("href", 'https://s.bookcdn.com/css/w/bw-160-36.css?v=0.0.1'); document.getElementsByTagName("head")[0].appendChild(css_file); function setWidgetData(data) { if (typeof (data) != 'undefined' && data.results.length > 0) { for (var i = 0; i < data.results.length; ++i) { var objMainBlock = document.getElementById('m-booked-small-t3-92199'); if (objMainBlock !== null) { var copyBlock = document.getElementById('m-bookew-weather-copy-' + data.results[i].widget_type); objMainBlock.innerHTML = data.results[i].html_code; if (copyBlock !== null) objMainBlock.appendChild(copyBlock); } } } else { alert('data=undefined||data.results is empty'); } }</script>
+                    <script type="text/javascript" charset="UTF-8" src="https://widgets.booked.net/weather/info?action=get_weather_info&ver=6&cityID=1062&type=13&scode=124&ltid=3457&domid=w209&anc_id=48935&cmetric=0&wlangID=1&color=338fff&wwidth=158&header_color=fff5d9&text_color=ffffff&link_color=ffffff&border_form=0&footer_color=fff5d9&footer_text_color=333333&transparent=0"></script><!-- weather widget end -->
                 </div>
-                <!-- End: weather widget -->
-
-                <script type="text/javascript">var css_file = document.createElement("link"); css_file.setAttribute("rel", "stylesheet"); css_file.setAttribute("type", "text/css"); css_file.setAttribute("href", 'https://s.bookcdn.com/css/w/bw-160-36.css?v=0.0.1'); document.getElementsByTagName("head")[0].appendChild(css_file); function setWidgetData(data) { if (typeof (data) != 'undefined' && data.results.length > 0) { for (var i = 0; i < data.results.length; ++i) { var objMainBlock = document.getElementById('m-booked-small-t3-92199'); if (objMainBlock !== null) { var copyBlock = document.getElementById('m-bookew-weather-copy-' + data.results[i].widget_type); objMainBlock.innerHTML = data.results[i].html_code; if (copyBlock !== null) objMainBlock.appendChild(copyBlock); } } } else { alert('data=undefined||data.results is empty'); } }</script>
-                <script type="text/javascript" charset="UTF-8" src="https://widgets.booked.net/weather/info?action=get_weather_info&ver=6&cityID=1062&type=13&scode=124&ltid=3457&domid=w209&anc_id=48935&cmetric=0&wlangID=1&color=338fff&wwidth=158&header_color=fff5d9&text_color=ffffff&link_color=ffffff&border_form=0&footer_color=fff5d9&footer_text_color=333333&transparent=0"></script><!-- weather widget end -->
-            </div>
-        </nav>
-        <!-- End: Header -->
+            </nav>
+            <!-- End: Header -->
 
 
 
-        {% block content %}
+            {% block content %}
 
-        {% endblock content %}
+            {% endblock content %}
 
 
-
+        </div>
         <!--FOOTER START-->
         <div id="footer" class="themeBgColor container-fluid">
 
