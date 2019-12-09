@@ -37,7 +37,7 @@
 
         <!-- Start: Header-->
         <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light themeBgColor">
-            <a class="navbar-brand" href="#"><img id="logoImage" src="{% static 'pages/base/images/logoBee.png' %}"> Beekeeping In Alaska</a>
+            <a class="navbar-brand" href="#"><img id="logoImage" src="{% static 'pages/base/images/logoBee.png' %}"> Alaska Beekeeping</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -57,29 +57,16 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <!-- TODO --- Add real link to the article wanted by the client -->
-                            <a class="dropdown-item" href="https://www.google.com">Read This Article</a>
+                            <a class="dropdown-item" href="https://www.frontiersman.com/around_the_valley/it-s-that-time-of-the-year-to-start-thinking/article_2a458460-2e66-11e8-a424-d3995d64259d.html" target="_blank">Read This Article</a>
                             <a class="dropdown-item" href="{% url 'different_honey_bees' %}">Different Honey Bees</a>
-                            <a class="dropdown-item" href="{% url 'different_hives' %}">Different Hives</a>
-                            <a class="dropdown-item" href="{% url 'recommended_equipment' %}">Recommended Equipment</a>
+                            <a class="dropdown-item" href="https://www.perfectbee.com/your-beehive/beehives-and-accessories/common-types-of-beehive" target="_blank">Different Hives</a>
+                            <a class="dropdown-item" href="https://beebuilt.com/pages/beekeeping-equipment" target="_blank">Recommended Equipment</a>
                             <a class="dropdown-item" href="{% url 'hive_placement' %}">Hive Placement</a>
                             <a class="dropdown-item" href="{% url 'classes' %}">Classes</a>
                         </div>
                      </li>
                     <!-- END: Getting Started Drop down -->
 
-                    <!-- START: Research and Videos Drop down -->
-                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Research and Videos
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{% url 'blog-home' %}">Articles</a>
-                            <a class="dropdown-item" href="{% url 'recommended_publications' %}">Recommended Publications</a>
-                            <a class="dropdown-item" href="{% url 'recommended_sites' %}">Recommended Sites</a>
-                            <a class="dropdown-item" href="{% url 'videos' %}">Videos</a>
-                        </div>
-                     </li>
-                    <!-- END: Research and Videos Drop down -->
 
                     <!-- START: Advanced Topics Drop down -->
                      <li class="nav-item dropdown">
@@ -95,6 +82,19 @@
                         </div>
                      </li>
                     <!-- END: Advanced Topics in Cold Weather Drop down -->
+                    <!-- START: Research and Videos Drop down -->
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Research and Videos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{% url 'blog-home' %}">Articles</a>
+                            <a class="dropdown-item" href="{% url 'recommended_publications' %}">Recommended Publications</a>
+                            <a class="dropdown-item" href="{% url 'recommended_sites' %}">Recommended Sites</a>
+                            <a class="dropdown-item" href="{% url 'videos' %}">Videos</a>
+                        </div>
+                     </li>
+                    <!-- END: Research and Videos Drop down -->
 
                     <!-- START: More Multi-level Drop down -->
                     <li class="nav-item dropdown">
@@ -175,7 +175,7 @@
 
 
         <!--FOOTER START-->
-        <div class="themeBgColor container-fluid">
+        <div id="footer" class="themeBgColor container-fluid">
 
             <div class="container">
                 
