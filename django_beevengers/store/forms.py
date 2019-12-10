@@ -1,5 +1,6 @@
 from django import forms
 from .models import *
+from captcha.fields import CaptchaField
 
 STATE_CHOICES = [
              ('AK', 'Alaska'), ('AL', 'Alabama'), ('AZ', 'Arizona'), ('AR', 'Arkansas'), ('CA', 'California'), ('CO', 'Colorado'),
@@ -35,6 +36,7 @@ class ProductForm(forms.ModelForm):
                                 error_messages={'required': 'This value is required',
                                                 'invalid': 'Please enter a zip code in this format: 12345'},
                                 widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'i.e. 12345'}))
+    captcha = CaptchaField()
 
     class Meta:
         # This needs to be here to make the form work as an object.
