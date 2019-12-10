@@ -1,5 +1,12 @@
+html {
+
+height:100%;
+
+}
+
 body {
-    position: relative;
+
+    height:100%;
     background-color:#eee5be;
 }
 
@@ -101,6 +108,12 @@ p {
 
     width:48px;
     margin-left:10px;
+
+}
+
+#footer {
+
+    margin-top:20px;
 
 }
 
