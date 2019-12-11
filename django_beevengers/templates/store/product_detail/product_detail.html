@@ -115,15 +115,6 @@
                     <p>{{ form.zip_code }}</p>
                 </div>
 
-                <div class="form-group">
-                    <p></p>
-                    <label>{{ form.captcha.label }}</label>
-                    {% if form.captcha.errors %}
-                        <div class="alert alert-primary" role="alert">{{ form.captcha.errors }}</div>
-                    {% endif %}
-                    <p>{{ form.captcha }}</p>
-                </div>
-
                 <button id="requestButton" type="submit" class="btn btn-success">Request</button>
 
             </form>
