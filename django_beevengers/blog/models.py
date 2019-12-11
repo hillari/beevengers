@@ -6,6 +6,10 @@ class Category(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=100)
 
+    class Meta:
+        # A meta option for Category model representing plural
+        verbose_name_plural = "Categories"
+
     def __str__(self):
         return self.title
 

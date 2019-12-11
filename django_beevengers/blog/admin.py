@@ -10,6 +10,7 @@ class PostAdmin(admin.ModelAdmin):
     list_filter = ('date_posted',)
     search_fields = ['title', 'body']
     prepopulated_fields = {'slug': ('title',)}
+    exclude = ('slug', 'date_modified')
 
 
 admin.site.register(Category)
