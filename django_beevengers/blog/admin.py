@@ -8,17 +8,16 @@ class PostAdmin(admin.ModelAdmin):
         (None, {
             'fields': ('title', 'author', 'body', 'category', 'blog_image')
         }),
-        ('Advanced options', {
+        ('Advanced options', {  # Create an expandable list for advanced options
             'classes': ('collapse',),
             'fields': ('slug',)
         })
     )
 
-    # list_display = ('title', 'date_posted', 'author')
+    list_display = ('title', 'date_posted', 'author')  # Adds display fields to admin page
     list_filter = ('date_posted',)
     search_fields = ['title', 'body']
     prepopulated_fields = {'slug': ('title',)}
-    # exclude = ('slug', 'date_modified')
 
 
 admin.site.register(Category)

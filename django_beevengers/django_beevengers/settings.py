@@ -31,7 +31,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'captcha',
 
     # custom apps
     'users.apps.UsersConfig',  # registering our custom User model
@@ -44,6 +43,7 @@ INSTALLED_APPS = [
     'cooking',
     'legal_requirements',
     'store',
+    'captcha',
 
 ]
 

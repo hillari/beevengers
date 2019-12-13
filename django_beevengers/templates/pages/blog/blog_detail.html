@@ -22,7 +22,7 @@
         <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
         <p class="text-muted">{{ post.author }} | {{ post.created_on }}</p>
 
-        <img class="img-thumbnail" id="mainImage" src="{{ post.blog_image.url }}">
+       {% if post.blog_image %} <img class="img-thumbnail" id="mainImage" src="{{ post.blog_image.url }}"> {%  endif %}
 
         <p> {{ post.body }}</p>
         <p class="card-text ">{{ object.content | safe }}</p>
