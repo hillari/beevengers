@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from django.shortcuts import render, redirect
 from django.views import generic
 from .models import Subscription
@@ -21,8 +22,11 @@ class Homepage(generic.TemplateView):
 
         if form.is_valid():
             subscriber = form.save(commit=False)
-            subscriber.email = form.cleaned_data['email']
-
+            new_email = form.cleaned_data['email']
+            if new_email == "":
+                # throw error
+                form.add_error('email', 'Please enter an email to subscribe.')
+            subscriber.email = new_email
             subscriber.save()
 
             form = SubscriptionForm()
