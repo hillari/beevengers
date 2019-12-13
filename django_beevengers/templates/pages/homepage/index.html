@@ -14,22 +14,31 @@
             <p class="lead">Find out how you can help the bees.</p>
             <hr class="my-4">
             <p><strong>Want to know more? Join our mailing list!</strong></p>
-            <form>
+            <form action="/home/" method="POST">
+                {% csrf_token %}
 
                 <div class="form-row justify-content-center">
-
-                    <div class="col-auto">
-                        <label class="sr-only" for="inlineFormInputGroup">Username</label>
-                        <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">@</div>
-                            </div>
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
-                        </div>
+                    <div class="row">
+                        {% if form.email.errors %}
+                            <div class="alert alert-danger" role="alert">{{ form.email.errors}}</div>
+                        {% endif %}
                     </div>
+                    <div class="row">
+                        <div class="col-auto">
+                            <label class="sr-only" for="inlineFormInputGroup">email</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">@</div>
+                                </div>
+                                <!-- Subscription email input here -->
+                                <div id="inlineFormInputGroup">{{ form.email }}</div>
 
-                    <div class="col-auto">
-                        <button type="submit" class="btn btn-primary mb-2">Sign up</button>
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary mb-2">Sign up</button>
+                        </div>
                     </div>
                 </div>
 
