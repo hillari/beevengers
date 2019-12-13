@@ -6,6 +6,10 @@ class Category(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=100)
 
+    class Meta:
+        # A meta option for Category model representing plural
+        verbose_name_plural = "Categories"
+
     def __str__(self):
         return self.title
 
@@ -22,12 +26,8 @@ class Post(models.Model):
     blog_image = models.ImageField(upload_to='images/blog_images', null=True, blank=True)
 
     class Meta:
-        ordering = ['date_posted']  # here we tell django to sort results by date_posted field
-
-    # TODO look up if we need this code with new view changes
-    # def get_absolute_url(self):
-    #     """Returns the url to access a particular instance of the model."""
-    #     return reverse('model-detail-view', args=[str(self.id)])
+        # meta option to tell django how to sort instances
+        ordering = ['date_posted']
 
     def __str__(self):
         return self.title
