@@ -4,7 +4,7 @@
 
 <ol class="breadcrumb" style="background-color:#eee5be">
 
-    <li class="breadcrumb-item"><a href="{%url 'homepage'%}">Home</a></li>
+    <li class="breadcrumb-item"><a class="breadcrumbLink" href="{%url 'homepage'%}">Home</a></li>
     <li class="breadcrumb-item" aria-current="page">Research and Videos</li>
     <li class="breadcrumb-item active" aria-current="page">Articles</li>
 
@@ -33,7 +33,7 @@
                     <h2 class="card-title">{{ post.title }}</h2>
                     <p class="card-text text-muted h6">{{ post.author }} | {{ post.date_posted}} </p>
                     <p class="card-text">{{post.body|slice:":200" }}</p>
-                    <a href="{% url 'post-detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+                    <a href="{% url 'post-detail' post.slug  %}" class="btn defaultButton">Read More &rarr;</a>
                 </div>
             </div>
             {% endfor %}
