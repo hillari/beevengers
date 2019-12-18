@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from django.utils.text import slugify
 
 
 class Category(models.Model):
@@ -24,6 +25,14 @@ class Post(models.Model):
     body = models.TextField()
     category = models.ManyToManyField(Category)  # b/c blog can have many category types
     blog_image = models.ImageField(upload_to='images/blog_images', null=True, blank=True)
+
+    def save(self, *args, **kwargs):
+        """This save overrides the django Model class save(), so we can slugify on change
+        We don't know what params we need to handle, so just pass args/kwargs"""
+        self.slug = slugify(self.title)
+        super(Post, self).save(*args, **kwargs)
+
+
 
     class Meta:
         # meta option to tell django how to sort instances
