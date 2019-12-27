@@ -10,30 +10,42 @@
 <div id="headerJumbotron" class="jumbotron" >
     <div id="jumbotronContentContainer" class="container col-lg-5">
         <div id="jumbotronContent" class="text-center" >
-            <h1 class="display-4">Alaska Beekeeping</h1>
-            <p class="lead">Find out how you can help the bees.</p>
+            <h1 style="padding-top:20px;" class="display-4">Alaska Beekeeping</h1>
+            <p style="padding-bottom:20px;" class="lead">All about cold weather beekeeping in the 49th state</p>
+
+            <!-- THIS IS FOR EMAIL SUBSCRIPTION. FOR LATER USE
             <hr class="my-4">
             <p><strong>Want to know more? Join our mailing list!</strong></p>
-            <form>
+            <form action="/home/" method="POST">
+                {% csrf_token %}
 
                 <div class="form-row justify-content-center">
+                    <div class="row">
+                        {% if form.email.errors %}
+                            <div class="alert alert-danger" role="alert">{{ form.email.errors}}</div>
+                        {% endif %}
+                    </div>
+                    <div class="row">
+                        <div class="col-auto mb-2">
+                            <label class="sr-only" for="inlineFormInputGroup">email</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">@</div>
+                                </div>
 
-                    <div class="col-auto">
-                        <label class="sr-only" for="inlineFormInputGroup">Username</label>
-                        <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">@</div>
+                                <div id="inlineFormInputGroup">{{ form.email }}</div>
                             </div>
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
                         </div>
                     </div>
-
-                    <div class="col-auto">
-                        <button type="submit" class="btn btn-primary mb-2">Sign up</button>
+                    <div class="row">
+                        <div class="col-auto mb-2">
+                            <button type="submit" class="btn defaultButton">Sign up</button>
+                        </div>
                     </div>
                 </div>
 
             </form>
+            -->
         </div>
     </div>
 </div>

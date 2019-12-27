@@ -1,6 +1,7 @@
 html {
 
-height:100%;
+ height:100%;
+ font-family:sans-serif;
 
 }
 
@@ -8,6 +9,7 @@ body {
 
     height:100%;
     background-color:#eee5be;
+    font-family:sans-serif;
 }
 
 p {
@@ -17,16 +19,26 @@ p {
 
 }
 
+.breadcrumbLink {
+    color:#1ea023;
+}
+
+.breadcrumbLink:hover {
+    color:#155812;
+}
+
 .themeLink {
 
-    color:#0477c4;
+    color:#1ea023;
     font-weight:bold;
+
 
 }
 
 .themeLink:hover {
 
-    color:#004879;
+    color:#155812;
+    font-weight:bold;
 
 }
 
@@ -36,14 +48,15 @@ p {
 
 .defaultButton {
 
-    background-color: #3498db;
+    background-color: #1ea023;
     color:white;
 
 }
 
 .defaultButton:hover{
 
-    background-color: #1d5275;
+    background-color: #155812;
+    color:#919191;
 
 }
 
