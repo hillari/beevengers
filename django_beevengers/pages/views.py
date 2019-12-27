@@ -1,7 +1,12 @@
 from django.shortcuts import render, redirect
 from django.views import generic
-from .models import Subscription
-from .forms import SubscriptionForm
+
+"""
+    **This will later be used for a subscription section on the homepage.**
+"""
+
+"""from .models import Subscription
+from .forms import SubscriptionForm"""
 
 
 def redirect_view(request):
@@ -9,14 +14,26 @@ def redirect_view(request):
 
 
 class Homepage(generic.TemplateView):
-    model = Subscription
+    """
+        **This will later be used for a subscription section on the homepage.**
+    """
+    """model = Subscription"""
     template_name = 'pages/homepage/index.html'
 
     def get(self, request):
-        form = SubscriptionForm()
-        return render(request, self.template_name, {'form': form})
+        """
+            **This will later be used for a subscription section on the homepage.**
+        """
+        #form = SubscriptionForm()
+        #return render(request, self.template_name, {'form': form})
 
-    def post(self, request):
+        return render(request, self.template_name)
+
+    """
+        **This will later be used for a subscription section on the homepage.**
+    """
+
+    """def post(self, request):
         form = SubscriptionForm(request.POST)
 
         if form.is_valid():
@@ -30,9 +47,10 @@ class Homepage(generic.TemplateView):
 
             form = SubscriptionForm()
             return render(request, 'pages/homepage/success.html')
-
+        
         args = {'form': form}
         return render(request, self.template_name, args)
+    """
 
 
 
