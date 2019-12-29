@@ -1,6 +1,8 @@
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from .models import CustomUser
 
+# Here we override the creation forms so we can include email when we make a user
+
 
 class CustomUserCreationForm(UserCreationForm):
 
