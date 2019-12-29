@@ -1,9 +1,9 @@
 
-Hillari Denny
-Ryan Richter
-Raul Reutov 
-CSCE A401 - Software Engineering
-University of Alaska, Anchorage 
+Hillari Denny  
+Ryan Richter  
+Raul Reutov   
+CSCE A401 - Software Engineering  
+University of Alaska, Anchorage   
 
 <h1>Alaska Beekeeping Society </h1>
 
