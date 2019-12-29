@@ -32,8 +32,6 @@ class Post(models.Model):
         self.slug = slugify(self.title)
         super(Post, self).save(*args, **kwargs)
 
-
-
     class Meta:
         # meta option to tell django how to sort instances
         ordering = ['date_posted']
