@@ -4,6 +4,10 @@
 # Edited by Hillari Denny
 # 10/15/2019
 
+
+# Keep the secrets secret
+**/*.env
+
 ### Django specific files ###
 
 *.log
